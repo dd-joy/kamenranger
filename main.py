@@ -3,8 +3,8 @@ import os
 from discord.ext import commands
 from dotenv import load_dotenv
 
-# 1. 환경 변수 로드 (data.env 파일 경로 지정)
-load_dotenv('data.env')
+# 1. 환경 변수 로드 (.env 파일 경로 지정)
+load_dotenv('.env')
 TOKEN = os.getenv('token')
 
 # 2. 봇의 권한(Intents) 설정
@@ -21,7 +21,7 @@ async def on_ready():
     print(f'로그인 완료: {bot.user.name}(ID: {bot.user.id})')
     print('------')
     # 상태 메시지 설정 (선택 사항)
-    await bot.change_presence(activity=discord.Game(name="서버 관리"))
+    await bot.change_presence(activity=discord.Game(name="변신"))
 
 # [명령어] 기본적인 테스트용 명령어 (!핑)
 @bot.command()
